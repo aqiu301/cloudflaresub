@@ -336,6 +336,7 @@ button.small {
   .copy-row {
     grid-template-columns: 1fr;
   }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -344,12 +345,33 @@ button.small {
     grid-template-columns: 1fr;
   }
 
-  .sub-actions {
-    grid-template-columns: 1fr;
-  }
-
   .sub-card-wide {
     grid-column: auto;
+  }
+
+  .sub-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .sub-actions input {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sub-actions button {
+    width: 100%;
+    min-width: 0;
+    justify-self: stretch;
+  }
+
+  .sub-actions .small {
+    padding-left: 0;
+    padding-right: 0;
+    white-space: nowrap;
   }
 }
 
